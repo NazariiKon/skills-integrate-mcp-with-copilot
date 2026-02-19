@@ -17,15 +17,49 @@ body {
 
 header {
   text-align: center;
-  padding: 20px 0;
+  padding: 20px;
   margin-bottom: 30px;
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
 }
 
+header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 header h1 {
   margin-bottom: 10px;
+  text-align: left;
+}
+
+header h2 {
+  text-align: left;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#user-info {
+  color: white;
+  margin-right: 10px;
+}
+
+.btn-icon {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.btn-icon:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 main {
@@ -197,4 +231,73 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+/* Modal Styles */
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 30px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 20px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+}
+
+.modal-content h3 {
+  margin-bottom: 20px;
+  color: #1a237e;
+}
+
+.modal-content .form-group {
+  margin-bottom: 15px;
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: #1a237e;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #3949ab;
+}
+
+#login-error {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+  border-radius: 4px;
 }
