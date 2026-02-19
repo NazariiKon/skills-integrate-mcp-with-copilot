@@ -8,9 +8,38 @@
   </head>
   <body>
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <div class="header-content">
+        <div>
+          <h1>Mergington High School</h1>
+          <h2>Extracurricular Activities</h2>
+        </div>
+        <div class="header-actions">
+          <span id="user-info" class="hidden">👤 <span id="username"></span></span>
+          <button id="login-btn" class="btn-icon">👤 Login</button>
+          <button id="logout-btn" class="btn-icon hidden">Logout</button>
+        </div>
+      </div>
     </header>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Teacher Login</h3>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="teacher-username">Username:</label>
+            <input type="text" id="teacher-username" required placeholder="Enter username" />
+          </div>
+          <div class="form-group">
+            <label for="teacher-password">Password:</label>
+            <input type="password" id="teacher-password" required placeholder="Enter password" />
+          </div>
+          <button type="submit" class="btn-primary">Login</button>
+        </form>
+        <div id="login-error" class="error hidden"></div>
+      </div>
+    </div>
 
     <main>
       <section id="activities-container">
@@ -46,5 +75,7 @@
     </footer>
 
     <script src="app.js"></script>
+  </body>
+</html>
   </body>
 </html>
